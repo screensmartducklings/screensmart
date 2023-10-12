@@ -1,0 +1,23 @@
+// Import Core Clean Blog SCSS
+@import "../assets/vendor/startbootstrap-clean-blog/scss/styles.scss";
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+
+    #search-input {
+        padding: 10px;
+        width: 80%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #search-btn {
+        padding: 10px 15px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+}
