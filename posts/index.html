@@ -3,12 +3,12 @@ layout: page
 title: Posts
 background: '/img/bg-post.jpg'
 ---
-
-{% for post in paginator.posts %}
  <div class="search-container">
           <input type="text" id="search-input" placeholder="Search for posts...">
           <button id="search-btn">Search</button>
         </div>
+{% for post in paginator.posts %}
+
         
 <article class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
