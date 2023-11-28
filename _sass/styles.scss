@@ -1,28 +1,94 @@
-// Import Core Clean Blog SCSS
+/* Import Core Clean Blog SCSS */
 @import "../assets/vendor/startbootstrap-clean-blog/scss/styles.scss";
-.search-container {
-    text-align: center;
-    margin: 20px 0;
 
-    #search-input {
-        padding: 10px;
-        width: 80%;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    #search-btn {
-        padding: 10px 15px;
-        border: none;
-        background-color: #333;
-        color: #fff;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-left: 10px;
-    }
+/* General Styles */
+body {
+  background: linear-gradient(to bottom, #ffffcc, #ffcc99);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
+/* Search Container Styles */
+.search-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#search-input {
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#search-btn {
+  padding: 10px 15px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Highlight Style */
 .highlight {
-    background-color: yellow;
-    color: black;
-  }
-  
+  background-color: yellow;
+  color: black;
+}
+
+/* Container Styles */
+.container {
+  padding: 20px; /* Add padding around the container */
+}
+
+/* Post Item Styles */
+.post-item {
+  background-color: #fff; /* Background color for each post item */
+  border: 1px solid #ddd; /* Add a border around each post item */
+  padding: 20px; /* Add padding around each post item */
+  margin-bottom: 20px; /* Add spacing between each post item */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for a card effect */
+  height: 400px; /* Set a fixed height for each post item */
+  overflow: hidden;
+}
+
+/* Post Image Styles */
+.post-item-image img {
+  width: 50%; /* Set the image width to 100% to make them the same size */
+  height: auto; /* Maintain aspect ratio for images */
+  display: block; /* Center the image horizontally */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Post Title Styles */
+.post-item-title {
+  font-size: 24px; /* Increase the title font size */
+  margin-top: 10px; /* Add spacing between the image and the title */
+  color: #333; /* Set the text color for post titles */
+  text-decoration: none; /* Remove underlines from post titles */
+  font-weight: bold;
+}
+
+/* Post Metadata Styles */
+.post-meta {
+  margin-top: 10px; /* Add spacing between the title and metadata */
+  font-size: 16px; /* Adjust the font size for metadata */
+  color: #777; /* Set the text color for metadata */
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #007bff; /* Set the background color for primary buttons */
+  color: #fff; /* Set the text color for primary buttons */
+  padding: 10px 20px; /* Add padding to the buttons */
+  border: none; /* Remove borders from the buttons */
+  border-radius: 5px; /* Add rounded corners to the buttons */
+  text-decoration: none; /* Remove underlines from the buttons */
+  transition: background-color 0.3s ease; /* Add a smooth hover effect */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Change the background color on hover */
+}
