@@ -37,13 +37,4 @@ background: '/img/posts.jpg'
 
 <hr>
 
-<!-- Pager -->
-<div class="clearfix">
-  <!-- Pagination Links -->
-  {% if paginator.previous_page %}
-    <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-  {% endif %}
-</div>
+
