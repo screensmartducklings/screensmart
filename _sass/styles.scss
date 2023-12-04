@@ -52,7 +52,22 @@ linear-gradient(to top, #fddb92, #d1fdff);
   height: 400px; /* Set a fixed height for each post item */
   overflow: hidden;
   border-radius: 20px;
+  transform: perspective(600px) rotateX(10deg);
+  opacity: 0;
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+  will-change: transform, opacity;
 }
+
+.post-item.visible {
+  transform: perspective(600px) rotateX(0);
+  opacity: 1;
+  
+}
+.post-item:hover {
+  transform: perspective(600px) rotateX(0) scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
 
 /* Post Image Styles */
 .post-item-image img {
