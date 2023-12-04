@@ -2,21 +2,44 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-$('#search-btn').click(function() {
-  var searchTerm = $('#search-input').val().toLowerCase();
-  var regex = new RegExp(`(${searchTerm})`, 'gi'); // Regular expression for case-insensitive search
 
-  $('.post-preview').hide(); // Hide all posts initially
+document.addEventListener('DOMContentLoaded', function() {
+  // Fetch the index
+  fetch('/search.json')
+    .then(response => response.json())
+    .then(data => {
+      var index = lunr(function() {
+        this.ref('id');
+        this.field('title');
+        this.field('content');
 
-  $('.post-preview').each(function() {
-    var postContent = $(this).text().toLowerCase(); // This includes title, subtitle, and other content
+        data.forEach(function(doc) {
+          this.add(doc);
+        }, this);
+      });
 
-    if (postContent.includes(searchTerm)) {
-      $(this).show(); // Show posts that match the search term
+      // Search function
+      document.getElementById('search-btn').addEventListener('click', function() {
+        var query = document.getElementById('search-input').value;
+        var results = index.search(query);
+        displayResults(results, data, query);
+      });
+    });
 
-      // Highlight the searched term in the content
-      var highlightedContent = $(this).html().replace(regex, '<span class="highlight">$1</span>');
-      $(this).html(highlightedContent);
-    }
-  });
+  // Display results
+  function displayResults(results, data, query) {
+    var resultsDiv = document.getElementById('search-results');
+    resultsDiv.innerHTML = '';
+
+    results.forEach(function(result) {
+      var item = data.find(doc => doc.id === result.ref);
+      var contentPreview = item.content.substring(0, 200);
+      contentPreview = contentPreview.replace(new RegExp(query, "gi"), `<span class="highlighted">${query}</span>`);
+
+      resultsDiv.innerHTML += `<div class="search-result">
+        <h3><a href="${item.id}">${item.title}</a></h3>
+        <p>${contentPreview}...</p>
+      </div>`;
+    });
+  }
 });
