@@ -3,34 +3,11 @@
 
 /* General Styles */
 body {
-  background: linear-gradient(247deg, #ffde56, #fff670, #ffe991, #fded70, #fffdbb);
-  background-size: 1000% 1000%;
-  -webkit-animation: screensmart 23s ease infinite;
-  -moz-animation: screensmart 23s ease infinite;
-  -o-animation: screensmart 23s ease infinite;
-  animation: screensmart 23s ease infinite;
-}
-@-webkit-keyframes screensmart {
-  0%{background-position:0% 75%}
-  50%{background-position:100% 26%}
-  100%{background-position:0% 75%}
-}
-@-moz-keyframes screensmart {
-  0%{background-position:0% 75%}
-  50%{background-position:100% 26%}
-  100%{background-position:0% 75%}
-}
-@-o-keyframes screensmart {
-  0%{background-position:0% 75%}
-  50%{background-position:100% 26%}
-  100%{background-position:0% 75%}
-}
-@keyframes screensmart {
-  0%{background-position:0% 75%}
-  50%{background-position:100% 26%}
-  100%{background-position:0% 75%}
-}
+background-color: linear-gradient(to top, #fddb92, #d1fdff);
+background-image:
+linear-gradient(to top, #fddb92, #d1fdff);
 
+}
 /* Search Container Styles */
 .search-container {
   text-align: center;
