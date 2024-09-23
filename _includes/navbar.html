@@ -11,12 +11,26 @@
         <li class="nav-item">
           <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
         </li>
-    <!--    <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="{{"/about" | relative_url }}">About</a>
-        </li> -->
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ "/posts" | relative_url }}">Posts</a>
         </li>
+        
+        <!-- Dropdown Menu for Interviews -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Interviews
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{ "/interviews/interview1" | relative_url }}">Interview 1</a>
+            <!-- <a class="dropdown-item" href="{{ "/interviews/interview2" | relative_url }}">Interview 2</a>-->
+            
+            <!-- Add more interview links as needed -->
+          </div>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{{"/contact" | relative_url }}">Contact</a>
         </li>
